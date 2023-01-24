@@ -1,0 +1,166 @@
+@name Snowy's Quillable Big Boy 4 Chime Whistle Pull Valve E2 (v1)
+@inputs Whistle Quill
+
+#[i mostly don't recommend using this version of the big boy whistle,
+mainly because everything you see are individual props, causing more lag.) 
+i suggest you use the other one (v2)]#
+
+    A=2
+    holoCreate(A)
+    holoModel(A,"models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+    holoScale(A,vec(1.6,1.6,1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,5,0)))
+    holoAng(A, entity():toWorld(ang(0,0,-90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=3
+    holoCreate(A)
+    holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl")
+    holoScale(A,vec(0.35,0.9,0.35))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,3.1,0)))
+    holoAng(A, entity():toWorld(ang(0,0,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=4
+    holoCreate(A)
+    holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl")
+    holoScale(A,vec(1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,1.1,0)))
+    holoAng(A, entity():toWorld(ang(0,0,-90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=5
+    holoCreate(A)
+    holoModel(A,"models/sprops/geometry/fhex_12.mdl")
+    holoScale(A,vec(0.2,1.8,0.2))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,1.5,0)))
+    holoAng(A, entity():toWorld(ang(0,90,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=6
+    holoCreate(A)
+    holoModel(A,"models/sprops/geometry/fhex_12.mdl")
+    holoScale(A,vec(0.08,2,0.08))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(2.5,1.1,0)))
+    holoAng(A, entity():toWorld(ang(0,90,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_darkgray")
+    holoColor(A,vec(255))
+    A=7
+    holoCreate(A)
+    holoModel(A,"models/sprops/geometry/fhex_12.mdl")
+    holoScale(A,vec(0.13,0.13,0.13))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(5.5,1.1,0)))
+    holoAng(A, entity():toWorld(ang(0,90,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_darkgray")
+    holoColor(A,vec(255))
+    
+    A=8
+    holoCreate(A)
+    holoModel(A,"models/sprops/misc/domes/size_0/dome_6x3.mdl")
+    holoScale(A,vec(1.1,1.1,0.7))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-1.8,0)))
+    holoAng(A, entity():toWorld(ang(0,0,-90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=9
+    holoCreate(A)
+    holoModel(A,"models/sprops/rectangles_superthin/size_0/rect_1_5x6.mdl")
+    holoScale(A,vec(1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-2.3,0)))
+    holoAng(A, entity():toWorld(ang(0,0,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=10
+    holoCreate(A)
+    holoModel(A,"models/sprops/rectangles_superthin/size_0/rect_1_5x6.mdl")
+    holoScale(A,vec(1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-2.3,0)))
+    holoAng(A, entity():toWorld(ang(90,0,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=11
+    holoCreate(A)
+    holoModel(A,"models/sprops/cylinders/size_3/cylinder_6x12.mdl")
+    holoScale(A,vec(1.1,1.1,0.92))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-8.3,0)))
+    holoAng(A, entity():toWorld(ang(0,0,90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+    holoColor(A,vec(255))
+    A=12
+    holoCreate(A)
+    holoModel(A,"models/hunter/tubes/tube1x1x1b.mdl")
+    holoScale(A,vec(0.139))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-11.3,0)))
+    holoAng(A, entity():toWorld(ang(225,0,90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+    holoColor(A,vec(255))
+    A=13
+    holoCreate(A)
+    holoModel(A,"models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+    holoScale(A,vec(1.6,1.6,1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-2,-10,0)))
+    holoAng(A, entity():toWorld(ang(0,0,-90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+    holoColor(A,vec(255))
+    A=14
+    holoCreate(A)
+    holoModel(A,"models/sprops/rectangles_superthin/size_0/rect_1_5x6.mdl")
+    holoScale(A,vec(1,0.5,1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(0.2,-1.1,0)))
+    holoAng(A, entity():toWorld(ang(0,0,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    
+    
+#[  WHISTLE CORD DO NOT CHANGE THIS PLEASE
+    i mean, who am i to tell you what to do? your parents?
+    go ahead, if you fuck something up, that's ur problem :) (jk.)  ]#
+    
+    holoCreate(1)
+    holoModel(1,"models/sprops/cylinders/size_1/cylinder_1_5x3.mdl")
+    holoScale(1,vec(1,1,0.2))
+    holoParent(1,entity())
+    holoPos(1,entity():toWorld(vec(3.2,-1.1,0)))
+    holoAng(1, entity():toWorld(ang(0,-90,0)))
+    holoMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(1,vec(255))
+    A=15
+    holoCreate(A)
+    holoModel(A,"models/sprops/rectangles_superthin/size_0/rect_1_5x18.mdl")
+    holoScale(A,vec(0.8,0.5,1))
+    holoParent(A,1)
+    holoPos(A,entity():toWorld(vec(3.2,-8.9,0)))
+    holoAng(A, entity():toWorld(ang(0,90,0)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+    A=16
+    holoCreate(A)
+    holoModel(A,"models/sprops/misc/tubes/size_1/tube_12x6.mdl")
+    holoScale(A,vec(0.1,0.1,0.1))
+    holoParent(A,1)
+    holoPos(A,entity():toWorld(vec(3.2,-16.5,0)))
+    holoAng(A, entity():toWorld(ang(0,90,90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+
+    
+if(Whistle){
+holoAng(1, entity():toWorld(ang(0,-80,0)))
+}
+
+if(Quill){
+holoAng(1, entity():toWorld(ang(0,-70,0)))
+}

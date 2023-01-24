@@ -1,0 +1,41 @@
+@name Snowy's Quillable 3 Chime Whistle Pull Valve E2
+@inputs Whistle Quill
+
+
+    holoCreate(1)
+    holoModel(1,"models/unionsparts/pull_valve2.mdl")
+    holoScale(1,vec(1))
+    holoParent(1,entity())
+    holoPos(1,entity():toWorld(vec(0.5,-2,0)))
+    holoAng(1, entity():toWorld(ang(90,-100,0)))
+    holoMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(1,vec(255))
+    A=2
+    holoCreate(A)
+    holoModel(A,"models/unionsparts/3chime.mdl")
+    holoScale(A,vec(1,1,1))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-5,-6.5,0)))
+    holoAng(A, entity():toWorld(ang(90,0,90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+    holoEntity(A):setSubMaterial(2,"models/proppertextures/enamel_black")
+    holoEntity(A):setSubMaterial(3,"models/proppertextures/aluminum")
+    holoColor(A,vec(36))
+    A=3
+    holoCreate(A)
+    holoModel(A,"models/sprops/cylinders/size_1/cylinder_1_5x12.mdl")
+    holoScale(A,vec(2,2,0.8))
+    holoParent(A,entity())
+    holoPos(A,entity():toWorld(vec(-5,8,0)))
+    holoAng(A, entity():toWorld(ang(0,0,-90)))
+    holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+    holoColor(A,vec(255))
+
+
+if(Whistle){
+holoAng(1, entity():toWorld(ang(90,-90,-5)))
+}
+
+if(Quill){
+holoAng(1, entity():toWorld(ang(90,-90,-20)))
+}

@@ -1,0 +1,322 @@
+@name Snowy's tugboat 3 Chime Whistle E2
+
+if(first()|duped()){
+    #put all your holos in this "first duped" area so the E2 doesn't have to keep re-loading everything.
+Color1=255
+
+A=1
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x6.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,0))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=2
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/fittings/x_fitting_3.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,4.4))) 
+holoAng(A, entity():toWorld(ang(0,0,180)) ) 
+holoScale(A,vec(0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=3
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x12.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,4.406))) 
+holoAng(A, entity():toWorld(ang(90,0,0)) ) 
+holoScale(A,vec(0.7,0.7,0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=4
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(4.7,0,4.406))) 
+holoAng(A, entity():toWorld(ang(90,0,0)) ) 
+holoScale(A,vec(0.8,0.8,0.25))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/aluminum")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=5
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(-4.7,0,4.406))) 
+holoAng(A, entity():toWorld(ang(90,0,0)) ) 
+holoScale(A,vec(0.8,0.8,0.25))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/aluminum")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=6
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/fittings/bend_short_90_3.mdl") 
+holoPos(A,entity():toWorld(vec(6.6,0,4.92))) 
+holoAng(A, entity():toWorld(ang(90,0,0)) ) 
+holoScale(A,vec(0.7))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=7
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/fittings/bend_short_90_3.mdl") 
+holoPos(A,entity():toWorld(vec(-6.6,0,4.92))) 
+holoAng(A, entity():toWorld(ang(90,180,0)) ) 
+holoScale(A,vec(0.7))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+
+#small whistle
+
+A=8
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,7))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.7))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=9
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,7.9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.82,0.82,0.15))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=10
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.5,0.5,0.6))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=11
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/domes/size_0/dome_3x1_5.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,10))) 
+holoAng(A, entity():toWorld(ang(0,0,180)) ) 
+holoScale(A,vec(1.2,1.2,1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=12
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,10))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.34,0.2,0.34))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=13
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,11))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.6,0.6,1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=14
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_3/cylinder_6x12.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,16.3))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.75,0.75,0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=15
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,21))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.39,0.2,0.39))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=16
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/unionsparts/safties2.mdl") 
+holoPos(A,entity():toWorld(vec(7.15,0,22.5))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.5,0.5,0.6))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+
+#medium whistle
+
+A=17
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,7))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.7))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=18
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,7.9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.9,0.9,0.3))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=19
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.7,0.7,1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=20
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/domes/size_0/dome_3x1_5.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,12))) 
+holoAng(A, entity():toWorld(ang(0,0,180)) ) 
+holoScale(A,vec(1.6,1.6,1.2))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=21
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,12))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.45,0.2,0.45))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=22
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,12))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.7,0.7,1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=23
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_3/cylinder_6x12.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,19.1))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.9,0.9,0.95))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=24
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,24.9))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.5,0.2,0.5))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=25
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/unionsparts/safties2.mdl") 
+holoPos(A,entity():toWorld(vec(-7.15,0,26.6))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.6,0.6,0.7))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+
+#big whistle
+
+A=26
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,7.9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=27
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,9))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(1.1,1.1,0.1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=28
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,10.1))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.8,0.8,0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=29
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/misc/domes/size_0/dome_3x1_5.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,12.3))) 
+holoAng(A, entity():toWorld(ang(0,0,180)) ) 
+holoScale(A,vec(2,2,1.3))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=30
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,12.3))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.57,0.3,0.57))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=31
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_2/cylinder_3x3.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,13))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.8,0.8,1.3))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/enamel_black")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=32
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/cylinders/size_3/cylinder_6x12.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,22))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(1.14,1.14,1.29))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=33
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/sprops/geometry/t_fdisc_12.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,29.9))) 
+holoAng(A, entity():toWorld(ang(0,0,90)) ) 
+holoScale(A,vec(0.63,0.3,0.63))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+A=34
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/unionsparts/safties2.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,32))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A,vec(0.7,0.7,0.8))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/brass")
+holoColor(A, vec(Color1)) 
+holoParent(A,entity())
+}
