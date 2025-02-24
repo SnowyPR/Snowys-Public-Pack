@@ -1,0 +1,47 @@
+@name Snowy's Rolling Stock Side Numbers (4 DIGITS)
+@inputs NumberIn:string
+@outputs NumberOut:string
+@persist Font
+
+Scale=vec(0.8) #Size of decals
+Color=vec(255,255,255) #The color you want
+Number=(1234)
+Size=0 #0 to 2
+
+Fonts = array(
+"cubics_pack/numbers/dt&i/" #number font
+    )[Font+1,string]
+
+
+if(NumberIn:length()==0){
+NumberOut=Number:toString()
+}else{
+NumberOut=NumberIn
+}
+Num=NumberOut:explode("")
+E=entity()
+
+I=1
+holoCreate(I)
+holoPos(I,E:toWorld(vec(0,0,0.1))) #change the position.
+holoAng(I, E:toWorld(ang(-90,0,0)))
+holoParent(I, E)
+holoScale(I,Scale)
+holoModel(I, "models/snowy/props/rolling_stock_side_numbers.mdl")
+holoEntity(I):setSubMaterial(4,"models/proppertextures/invisible")
+holoEntity(I):setSubMaterial(3,Fonts+Num[1,string])
+holoEntity(I):setSubMaterial(2,Fonts+Num[2,string])
+holoEntity(I):setSubMaterial(5,Fonts+Num[3,string])
+holoEntity(I):setSubMaterial(6,Fonts+Num[4,string])
+holoEntity(I):setSubMaterial(7,"models/proppertextures/invisible")
+holoColor(I,Color)
+
+if(Size==0){
+holoBodygroup(I,1,0)
+}
+if(Size==1){
+holoBodygroup(I,1,1)
+}
+if(Size==2){
+holoBodygroup(I,1,2)
+}
