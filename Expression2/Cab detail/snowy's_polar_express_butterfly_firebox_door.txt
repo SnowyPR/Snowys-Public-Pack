@@ -1,0 +1,206 @@
+@name Snowy's Polar Express butterfly firebox door
+@inputs Open Firebox:vector Warmup EngineActive
+@outputs Flame Cinders Closed
+@persist [OpenSound CloseSound]:string FireSound:string Ang Ang2 Closed FireboxCOL:vector FireDoorMat:string FireDoorColor:vector P4:entity P2:entity
+@model models/sprops/rectangles/size_3/rect_24x24x3.mdl
+@trigger Open Warmup EngineActive
+
+if(first() | dupefinished()){
+    
+    
+    OpenSound = "scotttrains/special/polar express/sfx/coal_trowing.wav"
+    CloseSound = "scotttrains/special/polar express/sfx/firebox_doorclose.wav"
+    
+    FireSound = "usa_locomotive_sounds_3/steam/fire/fire1.wav"
+    
+    FireDoorMat = "icegt/loco/ice_trainmetal_black"
+    
+    FireDoorColor = vec(60,60,60)
+    
+    Scale = 1
+    E = entity()
+    
+    A = 1
+    holoCreate(A, entity():toWorld(vec(10.6416,-4.96226,0)*Scale), vec(1),
+    entity():toWorld(ang(0,0,0)))
+    holoColor(A, vec4(0,0,0,0))
+    holoModel(A, "")
+    holoScale(A, vec(1))
+    holoParent(A, entity())  
+    holoMaterial(A,"") 
+    A = 2
+    holoCreate(A, entity():toWorld(vec(10.6416,-4.96226,-15)*Scale), vec(1),
+    entity():toWorld(ang(0,-90,-90)))
+    holoColor(A,FireDoorColor)
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1))
+    holoParent(A,1)  
+    holoEntity(A):setSubMaterial(2,FireDoorMat)
+    holoBodygroup(A,1,2)
+
+    #----------------
+    A = 3
+    holoCreate(A, entity():toWorld(vec(10.6416,4.96226,0)*Scale), vec(1),
+    entity():toWorld(ang(0,0,0)))
+    holoColor(A, vec4(0,0,0,0))
+    holoModel(A, "")
+    holoScale(A, vec(1))
+    holoParent(A, entity())  
+    holoMaterial(A,"") 
+    A = 4
+    holoCreate(A, entity():toWorld(vec(10.6416,4.96226,-15)*Scale), vec(1),
+    entity():toWorld(ang(0,-90,-90)))
+    holoColor(A,FireDoorColor)
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1))
+    holoParent(A,3)  
+    holoEntity(A):setSubMaterial(2,FireDoorMat)
+    holoBodygroup(A,1,3)
+    
+    A = 5
+    holoCreate(A, entity():toWorld(vec(10.6416,4.96226,0)*Scale), vec(1),
+    entity():toWorld(ang(0,0,0)))
+    holoColor(A, vec4(0,0,0,0))
+    holoModel(A, "")
+    holoScale(A, vec(1))
+    holoParent(A,3)  
+    holoMaterial(A,"") 
+    A = 6
+    holoCreate(A, entity():toWorld(vec(10.6416,4.96226,-15)*Scale), vec(1),
+    entity():toWorld(ang(0,-60,90)))
+    holoColor(A,FireDoorColor)
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1))
+    holoParent(A,5)  
+    holoEntity(A):setSubMaterial(2,FireDoorMat)
+    holoBodygroup(A,1,4)
+    
+    A = 18
+    holoCreate(A, entity():toWorld(vec(0,0,-15)*Scale), vec(1),
+    entity():toWorld(ang(0,-90,-90)))
+    holoColor(A,FireDoorColor)
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1)*Scale)
+    holoParent(A, entity())  
+    holoEntity(A):setSubMaterial(2,FireDoorMat)
+    holoBodygroup(A,1,0)    
+    A = 19
+    holoCreate(A, entity():toWorld(vec(0,0,-15)*Scale), vec(1),
+    entity():toWorld(ang(0,-90,-90)))
+    holoColor(A, vec4(255,255,255,255))
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1)*Scale)
+    holoParent(A, entity())  
+    holoEntity(A):setSubMaterial(3,"models/effects/splode_sheet")
+    holoBodygroup(A,1,1)
+    A = 20
+    holoCreate(A, entity():toWorld(vec(0,0,-15.1)*Scale), vec(1),
+    entity():toWorld(ang(0,-90,-90)))
+    holoColor(A, vec4(255,127,0,254))
+    holoModel(A, "models/snowy/props/polar_express_butterfly_firebox_door.mdl")
+    holoScale(A, vec(1)*Scale)
+    holoParent(A, entity())  
+    holoEntity(A):setSubMaterial(3,"models/props_combine/tpballglow")
+    holoBodygroup(A,1,1)
+    
+}
+interval(250)
+
+if(Open&Ang2<1&Ang<1){
+    timer("door",100)
+    if(clk("door")){
+        Ang2+=0.5
+    }
+}
+
+if(Open&(Ang2==1|(Ang==1&Ang2<1))){
+    stoptimer("door")
+    timer("door2",100)
+    if(clk("door2")&Ang<1){
+        Ang+=0.25
+        holoAng(1,entity():toWorld(ang(0,Ang*60,0)))
+        holoAng(3,entity():toWorld(ang(0,-Ang*60,0)))
+    }
+    if(clk("door2")&Ang==1&Ang2>0){
+        Ang2-=0.5
+    }
+    if(clk("door2")&Ang==1&Ang2==0){
+        stoptimer("door2")  
+    }
+}
+   
+
+if(!Open&Ang2<1&Ang>0){
+    timer("door",100)
+    if(clk("door")){
+        Ang2+=0.5
+    }
+}
+
+if(!Open&(Ang2==1|(Ang==0&Ang2<1))){
+    stoptimer("door")
+    timer("door2",100)
+    if(clk("door2")&Ang>0){
+        Ang-=0.25
+        holoAng(1,entity():toWorld(ang(0,Ang*60,0)))
+        holoAng(3,entity():toWorld(ang(0,-Ang*60,0)))
+    }
+    if(clk("door2")&Ang==0  &Ang2>0){
+        Ang2-=0.5
+    }
+    if(clk("door2")&Ang==0&Ang2==0){
+        stoptimer("door2")  
+    }
+}
+
+
+if(Ang < 0.5){
+    Closed = 1
+}else{Closed = 0}
+
+
+
+if(changed(Closed) & Closed){
+    
+    entity():soundPlay(1,0,CloseSound)
+    soundStop(2)
+    
+}
+
+if(changed(Open) & Open){
+    entity():soundPlay(1,0,OpenSound)
+    if(Open){
+        holoEntity(1):soundPlay(2,0,FireSound)
+    }
+    
+}
+#[elseif(Ang <= 0.1 & changed(Ang)){
+    entity():soundPlay(1,0,CloseSound)
+    soundStop(2)
+    Firebox = Firebox
+}]#
+
+if(Open & (EngineActive | Warmup)){
+    Flame = 1
+    if(Warmup){
+        Cinders = 1
+    }else{
+        Cinders = 0
+    }
+}else{
+    Cinders = 0
+    Flame = 0
+}
+
+if(EngineActive | Warmup){if(Open){FireboxCOL = vec(0)}elseif(Closed){FireboxCOL = Firebox}}else{FireboxCOL = vec(0)}
+if(clk("fboxrefresh")){
+    holoColor(4,FireboxCOL)
+    holoColor(5,FireboxCOL)
+    holoColor(6,FireboxCOL)
+    holoColor(7,FireboxCOL)
+    holoColor(11,FireboxCOL)
+    holoColor(12,FireboxCOL)
+    holoColor(13,FireboxCOL)
+    holoColor(14,FireboxCOL)
+    holoColor(19,Firebox)
+}
