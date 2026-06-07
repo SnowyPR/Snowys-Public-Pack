@@ -1,0 +1,136 @@
+@name Snowy's air brake gauge
+@inputs On BrakeInfo:array
+@outputs 
+@persist Ang1 Ang2 Ang3 Ang4
+@trigger 
+@model models/meem/gauge/ugauge1.mdl
+if(first() | dupefinished()){
+    E=entity()
+    E:setAlpha(0)
+
+    P=p2mCreate(1,entity():pos(),entity():angles())
+    P:p2mPushModel(1,"models/meem/gauge/ugauge1.mdl",array(2),vec(0,0,0.85),ang(0,90,0),vec(1.33,1.33,2),1,0,0)
+    P:p2mPushModel(1,"models/anytrains/props/bean/screw_m5.mdl",vec(0,5.75,1.61),ang(0,30,0),vec(1,1,1),0,0)
+    P:p2mPushModel(1,"models/sprops/geometry/t_fhex_12.mdl",vec(0,6,1.8),ang(0,0,90),vec(0.06,0.1,0.1),0,0)
+    P:p2mPushModel(1,"models/anytrains/props/bean/screw_m5.mdl",vec(0,-5.75,1.61),ang(0,30,0),vec(1,1,1),0,0)
+    P:p2mPushModel(1,"models/sprops/geometry/t_fhex_12.mdl",vec(0,-6,1.8),ang(0,0,90),vec(0.06,0.1,0.1),0,0)
+
+    P:p2mPushModel(1,"models/sprops/cylinders/size_2/cylinder_3x12.mdl",vec(-6.4,0,1.5),ang(0,0,90),vec(1.05,1.05,0.5),0,0)
+    P:p2mPushModel(1,"models/sprops/geometry/sphere_3.mdl",vec(-6.4,-3,1.5),ang(0,0,0),vec(1.05),0,0)
+    P:p2mPushModel(1,"models/sprops/geometry/superthin/discs/fdisc_12.mdl",vec(-6.4,3.15,1.5),ang(0,0,0),vec(0.27,1,0.27),0,0)
+    P:p2mPushModel(1,"models/sprops/geometry/superthin/discs/fdisc_12.mdl",vec(-6.4,3.15,1.5),ang(0,0,0),vec(0.06,2,0.06),0,0)
+    P:p2mPushModel(1,"models/sprops/rectangles/size_1_5/rect_6x12x3.mdl",vec(-5.1,0,0.8),ang(0,90,0),vec(0.4,0.5,0.5),0,0)
+    P:p2mPushModel(1,"models/props_c17/GasPipes006a.mdl",vec(-4,3.5,-4.3),ang(0,90,-22.5),vec(0.25),1,0)
+
+    P:p2mPushModel(1,"models/props_c17/GasPipes006a.mdl",vec(4,2.5,-12.65),ang(0,0,0),vec(0.5),1,0)
+    P:p2mPushModel(1,"models/props_c17/GasPipes006a.mdl",vec(4,4,-12.65),ang(0,0,0),vec(0.5),1,0)
+    P:p2mPushModel(1,"models/props_c17/GasPipes006a.mdl",vec(4,-2.5,-12.65),ang(0,0,0),vec(0.5),1,0)
+    P:p2mPushModel(1,"models/props_c17/GasPipes006a.mdl",vec(4,-4,-12.65),ang(0,0,0),vec(0.5),1,0)
+    
+    P:p2mPushModel(1,"models/sprops/rectangles_superthin/size_1/rect_3x12.mdl",vec(0,-5.5,-7),ang(90,90,0),vec(1),1,0)
+    P:p2mPushModel(1,"models/sprops/rectangles_superthin/size_1/rect_3x12.mdl",vec(0,5.5,-7),ang(90,90,0),vec(1),1,0)
+    P:p2mSetColor(1,vec(255))
+    P:p2mSetMaterial(1,"models/proppertextures/brass_new")
+    P:p2mSetParent(entity())
+    P:p2mSetUV(1,50)
+    P:p2mSetScale(1,vec(0.7515))
+    P:p2mSetPos(entity():toWorld(vec(0,0,-1)))
+    P:p2mBuild()
+    
+    A=0
+holoCreate(A) #Creates your holo.
+holoModel(A,"models/meem/gauge/ugauge1.mdl") 
+holoPos(A,entity():toWorld(vec(0,0,0))) 
+holoAng(A, entity():toWorld(ang(0,0,0)) ) 
+holoScale(A, vec(1,1,1))
+holoEntity(A):setSubMaterial(1,"models/proppertextures/invisible")
+holoColor(A, vec(255,223,127)) 
+holoParent(A,entity())  
+
+    A = 2
+    holoCreate(A) 
+    holoModel(A, "models/anytrains/props/detail/gauge_old_1_pointer.mdl")
+    holoPos(A,E:toWorld(vec(0,2.9,-0.1)))
+    holoColor(A, vec(36))
+    holoScale(A, vec(1,1,1))
+    holoParent(A, E)
+    holoMaterial(A,"models/proppertextures/acrylic_worn_dirty_nophong")
+    
+    A = 3
+    holoCreate(A)
+    holoModel(A, "models/anytrains/props/detail/gauge_old_1_pointer.mdl")
+    holoPos(A,E:toWorld(vec(0,2.9,-0.2)))
+    holoColor(A, vec(153,35,35))
+    holoScale(A, vec(1,1,1))
+    holoParent(A, E)
+    holoMaterial(A,"models/proppertextures/acrylic_worn_dirty_nophong")
+
+    A = 4
+    holoCreate(A)
+    holoModel(A, "models/anytrains/props/detail/gauge_old_1_pointer.mdl")
+    holoPos(A,E:toWorld(vec(0,-2.9,-0.1)))
+    holoColor(A, vec(36))
+    holoScale(A, vec(1,1,1))
+    holoParent(A, E)
+    holoMaterial(A,"models/proppertextures/acrylic_worn_dirty_nophong")
+    
+    A = 5
+    holoCreate(A)
+    holoModel(A, "models/anytrains/props/detail/gauge_old_1_pointer.mdl")
+    holoPos(A,E:toWorld(vec(0,-2.9,-0.2)))
+    holoColor(A, vec(153,35,35))
+    holoScale(A, vec(1,1,1))
+    holoParent(A, E)
+    holoMaterial(A,"models/proppertextures/acrylic_worn_dirty_nophong")
+
+}
+
+if(On){
+    
+EqRes = BrakeInfo[2,number]
+
+if(Ang1 != EqRes){
+    timer("ref1",100)
+    if(clk("ref1")){
+        Ang1 = clamp(Ang1 + (EqRes - Ang1) / 2, 0, 90)
+        holoAng(2,entity():toWorld(ang(0,38-Ang1,0)))
+    }
+}
+
+MainRes = BrakeInfo[1,number]
+
+if(Ang2 != MainRes){
+    timer("ref2",100)
+    if(clk("ref2")){
+        Ang2 = clamp(Ang2 + (MainRes - Ang2) / 2, 0, 146)
+        holoAng(3,entity():toWorld(ang(0,38-Ang2,0)))
+    }
+}
+
+BP = BrakeInfo[3,number]
+
+if(Ang3 != BP){
+    timer("ref1",100)
+    if(clk("ref1")){
+        Ang3 = clamp(Ang3 + (BP - Ang3) / 2, 0, 90)
+        holoAng(4,entity():toWorld(ang(0,52+Ang3,0)))
+    }
+}
+
+BC = BrakeInfo[5,number]
+
+if(Ang4 != BC){
+    timer("ref1",100)
+    if(clk("ref1")){
+        Ang4 = clamp(Ang4 + (BC - Ang4) / 2, 0, 72)
+        holoAng(5,entity():toWorld(ang(0,52+Ang4,0)))
+    }
+}
+
+}
+if(!On){
+    holoAng(2,entity():toWorld(ang(0,38,0)))    
+    holoAng(3,entity():toWorld(ang(0,38,0)))
+    holoAng(4,entity():toWorld(ang(0,52,0)))        
+    holoAng(5,entity():toWorld(ang(0,52,0)))            
+}
